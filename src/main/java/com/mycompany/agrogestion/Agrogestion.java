@@ -7,7 +7,7 @@ import com.mycompany.agrogestion.dao.MemoireDao;
 import com.mycompany.agrogestion.exceptions.AgroException;
 import com.mycompany.agrogestion.model.*;
 import com.mycompany.agrogestion.service.*;
-
+import java.time.LocalDate;
 /**
  *
  * @author PC
@@ -17,20 +17,25 @@ public class Agrogestion {
 
     public static void main(String[] args) {
         ParcelleService ps = new ParcelleService(new MemoireDao<>("Parcelle"));
-EmployeService es = new EmployeService(new MemoireDao<>("Employe"));
+CultureService cs = new CultureService(new MemoireDao<>("Culture"));
+ProduitService prs = new ProduitService(new MemoireDao<>("Produit"));
 try {
-    es.ajouterEmploye(new Employe("Sow", "Ibrahima", "0622222222", "Rue A", "ib@mail.fr",
-            TypeContrat.PERMANENT, 1800, StatutEmploye.ACTIF));
-    es.ajouterEmploye(new Employe("Diop", "Awa", "0633333333", "Rue B", "awa@mail.fr",
-            TypeContrat.SAISONNIER, 1500, StatutEmploye.INACTIF));
-    System.out.println("Masse salariale : " + es.calculerMasseSalariale());   // 1800.0
+    Parcelle nord = new Parcelle("Parcelle Nord", 12.5, "Route de la Forêt");
+    ps.ajouterParcelle(nord);
+    cs.ajouterCulture(new Culture(nord, "Blé", LocalDate.of(2026, 3, 1), LocalDate.of(2026, 7, 15), "SEMEE"));
+    try {
+        cs.ajouterCulture(new Culture(nord, "Orge", LocalDate.of(2026, 6, 1), LocalDate.of(2026, 9, 1), "PLANIFIEE"));
+    } catch (AgroException e) {
+        System.out.println("Refusé : " + e.getMessage());
+    }
+    cs.ajouterCulture(new Culture(nord, "Orge", LocalDate.of(2026, 8, 1), LocalDate.of(2026, 10, 1), "PLANIFIEE"));
+    System.out.println("Cultures sur la parcelle : " + cs.listerCulturesParParcelle(nord.getId()).size());
 
-    ps.ajouterParcelle(new Parcelle("Parcelle Nord", 12.5, "Route de la Forêt"));
-    ps.ajouterParcelle(new Parcelle("parcelle nord", 3, "ailleurs"));
+    prs.ajouterProduit(new Produit("Blé", "Céréale", 0, "kg", 20, 0.45));
+    prs.ajouterProduit(new Produit("blé", "Céréale", 0, "kg", 20, 0.45));
 } catch (AgroException e) {
     System.out.println("Refusé : " + e.getMessage());
 }
         
 }   
 }
-

@@ -1,4 +1,6 @@
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\Agrogestion.java
+C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\dao\GenericDAO.java
+C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\dao\MemoireDao.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\exceptions\AccesDonneesException.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\exceptions\AgroException.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\exceptions\DonneeInvalideException.java

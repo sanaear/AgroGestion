@@ -4,22 +4,23 @@
 
 package com.mycompany.agrogestion;
 
-import com.mycompany.agrogestion.model.*;
-
+/**
+ *
+ * @author PC
+ */
+import com.mycompany.agrogestion.dao.MemoireDao;
+import com.mycompany.agrogestion.model.Parcelle;
 public class Agrogestion {
 
     public static void main(String[] args) {
-
-Fournisseur f = new Fournisseur("Martin", "Paul", "0600000000", "Rue A", "paul@semences.fr", "F001", "Semences");
-Produit ble = new Produit("Blé", "Céréale", 0, "kg", 20, 0.45);
-Achat achat = new Achat(f, "Coop Agri", EtatPaiement.PAYE);
+MemoireDao<Parcelle> dao = new MemoireDao<>("Parcelle");
+Parcelle p = new Parcelle("Parcelle Nord", 12.5, "Route de la Forêt");
 try {
-    achat.valider();                       // refusé : aucune ligne
+    dao.add(p);
+    System.out.println("Id attribué : " + p.getId());          // 1
+    System.out.println("Nombre : " + dao.findAll().size());    // 1
+    dao.findById(99);
 } catch (com.mycompany.agrogestion.exceptions.AgroException e) {
     System.out.println("Refusé : " + e.getMessage());
-}
-achat.ajouterLigne(new LigneAchat(ble, 100, 0.40));
-achat.ajouterLigne(new LigneAchat(ble, 50, 0.42));
-System.out.println(achat.getMontant());    // 61.0    }
-}
+}    }
 }

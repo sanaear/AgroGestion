@@ -3,24 +3,34 @@
  */
 
 package com.mycompany.agrogestion;
+import com.mycompany.agrogestion.dao.MemoireDao;
+import com.mycompany.agrogestion.exceptions.AgroException;
+import com.mycompany.agrogestion.model.*;
+import com.mycompany.agrogestion.service.*;
 
 /**
  *
  * @author PC
  */
-import com.mycompany.agrogestion.dao.MemoireDao;
-import com.mycompany.agrogestion.model.Parcelle;
+
 public class Agrogestion {
 
     public static void main(String[] args) {
-MemoireDao<Parcelle> dao = new MemoireDao<>("Parcelle");
-Parcelle p = new Parcelle("Parcelle Nord", 12.5, "Route de la Forêt");
+        ParcelleService ps = new ParcelleService(new MemoireDao<>("Parcelle"));
+EmployeService es = new EmployeService(new MemoireDao<>("Employe"));
 try {
-    dao.add(p);
-    System.out.println("Id attribué : " + p.getId());          // 1
-    System.out.println("Nombre : " + dao.findAll().size());    // 1
-    dao.findById(99);
-} catch (com.mycompany.agrogestion.exceptions.AgroException e) {
+    es.ajouterEmploye(new Employe("Sow", "Ibrahima", "0622222222", "Rue A", "ib@mail.fr",
+            TypeContrat.PERMANENT, 1800, StatutEmploye.ACTIF));
+    es.ajouterEmploye(new Employe("Diop", "Awa", "0633333333", "Rue B", "awa@mail.fr",
+            TypeContrat.SAISONNIER, 1500, StatutEmploye.INACTIF));
+    System.out.println("Masse salariale : " + es.calculerMasseSalariale());   // 1800.0
+
+    ps.ajouterParcelle(new Parcelle("Parcelle Nord", 12.5, "Route de la Forêt"));
+    ps.ajouterParcelle(new Parcelle("parcelle nord", 3, "ailleurs"));
+} catch (AgroException e) {
     System.out.println("Refusé : " + e.getMessage());
-}    }
 }
+        
+}   
+}
+

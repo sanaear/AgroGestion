@@ -5,5 +5,11 @@ C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\a
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\exceptions\EntiteIntrouvableException.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\exceptions\ParcelleOccupeeException.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\exceptions\StockInsuffisantException.java
+C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\EtatPaiement.java
+C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Facturable.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Personne.java
+C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\StatutEmploye.java
+C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\TypeContrat.java
+C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\TypeMouvement.java
+C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Validable.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\util\Validation.java

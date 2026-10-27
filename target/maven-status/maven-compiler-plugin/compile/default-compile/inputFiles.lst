@@ -5,6 +5,7 @@ C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\a
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\exceptions\EntiteIntrouvableException.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\exceptions\ParcelleOccupeeException.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\exceptions\StockInsuffisantException.java
+C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Achat.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Client.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Culture.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Employe.java
@@ -12,6 +13,8 @@ C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\a
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\EtatPaiement.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Facturable.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Fournisseur.java
+C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\LigneAchat.java
+C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\LigneVente.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\MouvementStock.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Parcelle.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Personne.java
@@ -20,4 +23,5 @@ C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\a
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\TypeContrat.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\TypeMouvement.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Validable.java
+C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\model\Vente.java
 C:\Users\PC\Documents\NetBeansProjects\agrogestion\src\main\java\com\mycompany\agrogestion\util\Validation.java

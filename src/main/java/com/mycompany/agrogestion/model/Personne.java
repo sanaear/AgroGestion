@@ -1,28 +1,26 @@
-
 package com.mycompany.agrogestion.model;
 
+import com.mycompany.agrogestion.exceptions.DonneeInvalideException;
+import com.mycompany.agrogestion.util.Validation;
 
-public class Personne {
-    private int id;
-    String nom;
-    String tele;
-    String address;
-    String email;
+/** Données communes à toutes les personnes : employés, clients, fournisseurs. */
+public abstract class Personne extends Entite {
 
-    public Personne(int id, String nom, String tele, String address, String email) {
-        this.id = id;
+    private String nom;
+    private String prenom;
+    private String telephone;
+    private String adresse;
+    private String email;
+
+    protected Personne() {
+    }
+
+    protected Personne(String nom, String prenom, String telephone, String adresse, String email) {
         this.nom = nom;
-        this.tele = tele;
-        this.address = address;
+        this.prenom = prenom;
+        this.telephone = telephone;
+        this.adresse = adresse;
         this.email = email;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNom() {
@@ -33,20 +31,28 @@ public class Personne {
         this.nom = nom;
     }
 
-    public String getTele() {
-        return tele;
+    public String getPrenom() {
+        return prenom;
     }
 
-    public void setTele(String tele) {
-        this.tele = tele;
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
-    public String getAddress() {
-        return address;
+    public String getTelephone() {
+        return telephone;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
     }
 
     public String getEmail() {
@@ -56,8 +62,17 @@ public class Personne {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
-    
-    
+
+
+    @Override
+    public void valider() throws DonneeInvalideException {
+        Validation.texteNonVide("nom", nom);
+        Validation.texteNonVide("prénom", prenom);
+        Validation.emailValideSiRenseigne(email);
+    }
+
+    @Override
+    public String toString() {
+        return prenom + " " + nom;
+    }
 }

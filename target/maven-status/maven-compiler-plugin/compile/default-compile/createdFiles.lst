@@ -4,6 +4,7 @@ com\mycompany\agrogestion\model\Client.class
 com\mycompany\agrogestion\model\TypeMouvement.class
 com\mycompany\agrogestion\Agrogestion.class
 com\mycompany\agrogestion\exceptions\ParcelleOccupeeException.class
+com\mycompany\agrogestion\model\Culture.class
 com\mycompany\agrogestion\model\EtatPaiement.class
 com\mycompany\agrogestion\exceptions\AgroException.class
 com\mycompany\agrogestion\exceptions\EntiteIntrouvableException.class
@@ -11,6 +12,7 @@ com\mycompany\agrogestion\model\Personne.class
 com\mycompany\agrogestion\model\StatutEmploye.class
 com\mycompany\agrogestion\model\Fournisseur.class
 com\mycompany\agrogestion\model\TypeContrat.class
+com\mycompany\agrogestion\model\Parcelle.class
 com\mycompany\agrogestion\util\Validation.class
 com\mycompany\agrogestion\exceptions\AccesDonneesException.class
 com\mycompany\agrogestion\exceptions\StockInsuffisantException.class

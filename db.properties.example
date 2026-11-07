@@ -1,0 +1,3 @@
+db.url=jdbc:mysql://localhost:3306/agrogestion?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+db.user=agro
+db.password=votre_mot_de_passe
